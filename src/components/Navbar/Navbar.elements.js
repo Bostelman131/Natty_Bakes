@@ -33,9 +33,9 @@ export const NavLogo = styled(Link)`
 `;
 
 export const LogoIcon = styled.img`
-    height: 80px;
+    height: 100px;
     width: 114px;
-    margin: 15px;
+    margin: 10px;
 `;
 
 export const LogoText = styled.div`

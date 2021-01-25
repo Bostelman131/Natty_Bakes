@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'
-import Logo from 'assets/Logo.svg';
+import LogoSRC from 'assets/Logo.svg';
 import { Nav, NavbarContainer, NavLogo, LogoIcon, LogoText, MobileIcon } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
             <Nav>
                 <NavbarContainer>
                     <NavLogo to="/">
-                        <LogoIcon src={Logo} />
+                        <LogoIcon src={LogoSRC} />
                         <LogoText>
                             Natty Bakes
                         </LogoText>
