@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: sans-serif;
 
         --NavHeight: 80px;
-        --MenuItemHeight: 80px;
+        --MenuItemHeight: 100px;
 
     }
 `;
@@ -27,5 +27,10 @@ export const Container = styled.div`
         padding-left: 30px;
     }
 `;
+
+
+
+
+
 
 export default GlobalStyle;

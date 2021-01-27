@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import LogoSRC from 'assets/Logo.svg';
 import { Nav, NavbarContainer, NavLogo, LogoIcon, MobileIcon, NavMenu, NavItem, NavLinks } from "./Navbar.elements";
 import { IconContext } from 'react-icons/lib';
+import { Button } from 'components/Button/Button'
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
@@ -14,20 +15,39 @@ const Navbar = () => {
             <IconContext.Provider value={{color: 'white'}} >
             <Nav>
                 <NavbarContainer>
+
+
                     <NavLogo to="/">
                         <LogoIcon src={LogoSRC} />
                         Natty Bakes
                     </NavLogo>
 
+
+
                     <MobileIcon onClick={handleClick}>
                         { click ? <FaTimes /> : <FaBars /> } 
                     </MobileIcon>
+
+
+
                     <NavMenu click={click} onClick={handleClick}>
                         <NavItem>
                             <NavLinks to='/'>Home</NavLinks>
-                            <NavLinks to='/'>Menu</NavLinks>
                         </NavItem>
+                        <NavItem>
+                            <NavLinks to='/'>Menu</NavLinks>
+                        </NavItem>                        
+                        <NavItem>
+                            <NavLinks to='/'>About Us</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <Button>Sign In</Button>
+                        </NavItem>
+                       
                     </NavMenu>
+
+
+
                 </NavbarContainer>
             </Nav> 
             </IconContext.Provider>

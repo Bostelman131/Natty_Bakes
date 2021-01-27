@@ -15,7 +15,7 @@ export const Nav = styled.nav `
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid white;
 `;
 
 export const NavbarContainer = styled(Container) `
@@ -34,14 +34,15 @@ export const NavLogo = styled(Link)`
     justify-self: flex-start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2.7rem;
     display: flex;
     align-items: center;
     font-family: 'Satisfy', cursive;
+    font-size: 2.7rem;
+    font-weight: 700;
 `;
 
 export const LogoIcon = styled.img`
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     height: 60px;
     fill: white;
 `;
@@ -110,6 +111,8 @@ export const NavLinks = styled(Link)`
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
+    font-family: 'Satisfy', cursive;
+    font-size: 2rem;
 
     @media screen and (max-width: 960px) {
         text-align: center;
@@ -118,7 +121,8 @@ export const NavLinks = styled(Link)`
         display: table;
 
         &:hover {
-            color: purple;
+            font-size: 2.5rem;
+            font-weight: 700;
             transition: all 0.3s ease;
         }
     }
