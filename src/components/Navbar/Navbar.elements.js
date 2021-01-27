@@ -71,7 +71,6 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    background: black;
 
     @media screen and (max-width: 960px) {
         display: flex;
@@ -80,10 +79,10 @@ export const NavMenu = styled.ul`
         height: 90vh;
         position: absolute;
         top: var(--NavHeight);
-        left: ${({ click }) => (click ? 0 : '-100%')};
+        left: ${({click}) => (click ? 0 : '-100%')};
         opacity: 1;
         transition: all 0.5s ease;
-        background: purple;
+        background: #9F7893;
     }
 `;
 
@@ -92,7 +91,7 @@ export const NavItem = styled.li`
     border-bottom: 2px solid transparent;
 
     &:hover {
-        border-bottom: 2px solid purple;
+        border-bottom: 2px solid white;
     }
 
     @media screen and (max-width: 960px) {
