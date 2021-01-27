@@ -28,7 +28,7 @@ const Navbar = () => {
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>
-            </Nav>
+            </Nav> 
             </IconContext.Provider>
         </React.Fragment>
     );

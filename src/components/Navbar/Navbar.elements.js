@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav `
     height: var(--NavHeight);
-    background: black;
+    background: #9F7893;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,8 @@ export const Nav = styled.nav `
     position: sticky;
     top: 0;
     z-index: 999;
+    border-bottom: 2px solid #9F7893;
+    border-style: double;
 `;
 
 export const NavbarContainer = styled(Container) `
@@ -22,7 +24,6 @@ export const NavbarContainer = styled(Container) `
 
     display: flex;
     justify-content: space-between;
-    background: red;
 `;
 
 
@@ -34,15 +35,16 @@ export const NavLogo = styled(Link)`
     justify-self: flex-start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.7rem;
     display: flex;
     align-items: center;
+    font-family: 'Satisfy', cursive;
 `;
 
 export const LogoIcon = styled.img`
     margin-right: 0.5rem;
-    height: var(--NavHeight);
-    background: green;
+    height: 60px;
+    fill: white;
 `;
 
 
@@ -70,6 +72,7 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
+    background: black;
 
     @media screen and (max-width: 960px) {
         display: flex;
@@ -81,7 +84,7 @@ export const NavMenu = styled.ul`
         left: ${({ click }) => (click ? 0 : '-100%')};
         opacity: 1;
         transition: all 0.5s ease;
-        background: black;
+        background: purple;
     }
 `;
 
