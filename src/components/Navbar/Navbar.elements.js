@@ -15,8 +15,7 @@ export const Nav = styled.nav `
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 2px solid #9F7893;
-    border-style: double;
+    border-bottom: 1px solid gray;
 `;
 
 export const NavbarContainer = styled(Container) `

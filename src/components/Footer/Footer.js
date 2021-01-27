@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { instagram } from 'react-icons/fa';
+import { FooterContainer} from './Footer.elements';
+import { IconContext } from 'react-icons/lib';
+
 
 export default function Footer() {
     return (
-        <div>
-            Footer Text
-        </div>
+        <React.Fragment>
+            <IconContext.Provider value={{color: 'white'}} >
+                    <FooterContainer>
+                        Footer Text
+                    </FooterContainer>
+            </IconContext.Provider>
+        </React.Fragment>
     )
 }
