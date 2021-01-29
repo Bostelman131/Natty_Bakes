@@ -5,10 +5,11 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: sans-serif;
+        font-family: 'Satisfy', cursive;
 
-        --NavHeight: 80px;
+        --NavHeight: 60px;
         --MenuItemHeight: 100px;
+        --PrimaryColor: #9F7893;
 
     }
 `;
@@ -16,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1800px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 50px;

@@ -13,7 +13,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route path='/' exact component={Home}/>
-            <Route path='/menu' component={Menu}/>
+            <Route path='/Menu' component={Menu}/>
           </Switch>
           <Footer />
         </Router>

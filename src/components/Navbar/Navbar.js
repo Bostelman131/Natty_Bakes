@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import LogoSRC from 'assets/Logo.svg';
 import { Nav, NavbarContainer, NavLogo, LogoIcon, MobileIcon, NavMenu, NavItem, NavLinks } from "./Navbar.elements";
 import { IconContext } from 'react-icons/lib';
-import { Button } from 'components/Button/Button'
+import { SignButton } from 'components/Button/Button'
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
@@ -35,17 +35,15 @@ const Navbar = () => {
                             <NavLinks to='/'>Home</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/'>Menu</NavLinks>
+                            <NavLinks to='/Menu'>Menu</NavLinks>
                         </NavItem>                        
                         <NavItem>
-                            <NavLinks to='/'>About Us</NavLinks>
+                            <NavLinks to='/AboutUs'>About Us</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <Button>Sign In</Button>
+                            <SignButton STYLE='btn--primary' SIZE='btn-medium'>Sign In</SignButton>
                         </NavItem>
-                       
                     </NavMenu>
-
 
 
                 </NavbarContainer>
