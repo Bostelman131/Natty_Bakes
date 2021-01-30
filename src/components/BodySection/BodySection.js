@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
-import { BodySec, BodyContainer, InfoRow, InfoColumn, TextWrapper } from './BodySection.element'
+import { BodySec, BodyContainer, InfoRow, InfoColumn, TextWrapper,
+    TopLine, Heading, Subtitle, ImgWrapper, Img } from './BodySection.element'
 
-const BodySection = ({ lightBg, primaryColor, imgStart }) => {
+const BodySection = ({ 
+    lightBg, 
+    primaryColor, 
+    imgStart, 
+    lightTopLine, 
+    topLine, 
+    lightText, 
+    headline, 
+    lightTextDesc, 
+    description,
+    img,
+    alt,
+    start
+}) => {
+
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
@@ -16,10 +31,32 @@ const BodySection = ({ lightBg, primaryColor, imgStart }) => {
                     <InfoRow imgStart={imgStart}>
                         <InfoColumn>
                             <TextWrapper>
-                                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                                <Heading lightText={lightText}>{headline}</Heading>
-                                <subtitle lightTextDesc={lightTextDesc}>{description}</subtitle>
+
+                                <TopLine 
+                                lightTopLine={lightTopLine} 
+                                primaryColor={primaryColor}>
+                                    {topLine}
+                                </TopLine>
+
+                                <Heading 
+                                lightText={lightText}
+                                primaryColor={primaryColor}>
+                                    {headline}
+                                </Heading>
+
+                                <Subtitle 
+                                lightTextDesc={lightTextDesc}
+                                primaryColor={primaryColor}>
+                                    {description}
+                                </Subtitle>
+
                             </TextWrapper>
+                        </InfoColumn>
+
+                        <InfoColumn>
+                            <ImgWrapper start={start}>
+                                <Img src={img} alt={alt} />
+                            </ImgWrapper>
                         </InfoColumn>
                     </InfoRow>
                 </BodyContainer>
