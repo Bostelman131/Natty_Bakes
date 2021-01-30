@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 
 export const SignButton = styled.button `
-    margin-top: .5rem;
+    margin-top: .75rem;
     padding: 2.5px 20px;
     border-radius: 4px;
     font-size:1.5rem;
     outline: none;
     border: none;
     cursor: pointer;
+    color: var(--PrimaryColor);
+    font-family: var(--HeaderTextStyle);
 
     &:hover {
         font-weight: 500;
@@ -27,7 +29,6 @@ export const SignButton = styled.button `
         width: 100%;
         display: table;
         font-weight: 700;
-        color: #9F7893;
 
     &:hover {
         padding: 1.25rem;

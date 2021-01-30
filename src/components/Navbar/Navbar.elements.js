@@ -21,7 +21,7 @@ export const Nav = styled.nav `
 export const NavbarContainer = styled(Container) `
     display: inline-flex;
     justify-content: space-between;
-    height: var(--NavHeight);   
+    height: var(--NavHeight);
 
     ${Container};
 `;
@@ -39,6 +39,7 @@ export const NavLogo = styled(Link)`
     align-items: center;
     font-size: 2rem;
     font-weight: 700;
+    font-family: var(--HeaderTextStyle);   
 `;
 
 export const LogoIcon = styled.img`
@@ -105,6 +106,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
+    font-family: var(--HeaderTextStyle);
     color: white;
     display: flex;
     align-items: center;

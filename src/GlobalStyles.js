@@ -5,11 +5,12 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Satisfy', cursive;
 
         --NavHeight: 60px;
         --MenuItemHeight: 100px;
         --PrimaryColor: #9F7893;
+        --HeaderTextStyle: 'Satisfy', cursive;
+        --BodyTextStyle: 'Vollkorn', serif;
 
     }
 `;
