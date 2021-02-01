@@ -121,6 +121,7 @@ export const NavLinks = styled(Link)`
         font-weight: 500;
         transition: all 0.1s ease;
         border-bottom: 2px solid white;
+        font-size: 1.6rem;
     }
 
     @media screen and (max-width: 960px) {

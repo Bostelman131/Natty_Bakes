@@ -6,12 +6,16 @@ import { Link } from 'react-router-dom';
 export const BodySec = styled.div`
     background: ${({ lightBg, primaryColor})  => (lightBg ? 'white': primaryColor)};
     color: ${({ lightBg, primaryColor})  => (lightBg ? primaryColor : 'white')};
-    padding: 120px 0;
+    padding: 130px 0px 20px;
+
+    @media screen and (max-width: 960px) {
+        padding: 50px 0px 0px;
+    }
 `;
 
 export const BodyContainer = styled(Container)`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-family: var(--BodyTextStyle);
 
     ${Container};
@@ -19,23 +23,21 @@ export const BodyContainer = styled(Container)`
 
 export const InfoRow = styled.div`
     display: flex;
-    margin: 0 -15px -15px -15px;
-    flex-wrap: wrap;
     align-items:center;
+    max-width: 1000px;
+    width: 80%;
     flex-direction: ${({imgStart }) => (imgStart ? 'row-reverse': 'row')};
 
     @media screen and (max-width: 960px) {
-        flex-direction: 'row-reverse';
+        flex-direction:column;
+        flex-direction: column-reverse;
     }
 `;
 
 export const InfoColumn = styled.div`
     margin-bottom:15px;
-    padding-right:15px;
-    padding-left:15px;
-    flex:1;
-    max-width: 60%;
     flex-basis: 50%;
+    align-items:center;
 
     @media screen and (max-width: 768px) {
         max-width: 100%;
@@ -45,13 +47,20 @@ export const InfoColumn = styled.div`
     }
 `;
 
+
+
+
+
+
+
 export const TextWrapper = styled.div`
-    max-width: 540px;
+  
     padding-top: 0;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
 
     @media screen and (max-width: 768px) {
-        padding-bottom: 65px;
+        padding-bottom: 10px;
     }
 `;
 
@@ -62,35 +71,103 @@ export const TopLine = styled.div `
     line-height: 16px;
     letter-spacing: 1.4px;
     margin-bottom: 16px;
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
 `;
 
 export const Heading = styled.h1 `
-    font-size: 48px;
-    margin-bottom: 24px;
+    font-size: 3rem;
+    margin-bottom: 30px;
     line-height: 1.1;
+    text-decoration: underline;
     color: ${({ lightText, primaryColor})  => (lightText ? primaryColor : 'white')};
+
+    @media screen and (max-width: 960px) {
+        margin-top: 40px;
+    }
 `;
 
 export const Subtitle = styled.p `
-    font-size: 1.5rem;
-    max-width: 440px;
-    margin-bottom: 35px;
+    font-size: 1.7rem;
+    max-width: 90%;
+    margin-bottom: 25px;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 2;
+    text-indent: 30px;
     color: ${({ lightTextDesc, primaryColor})  => (lightTextDesc ? primaryColor : 'white')};
 `;
 
-export const ImgWrapper = styled.div`
-    max-width: 555px;
+export const MenuLink = styled(Link)`
+    text-decoration:none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 40px;
+    font-size: 1rem;
+    margin-bottom: 40px;
+
+    &:hover {
+        transition: all 0.2s ease-in;
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 960px) {
+        margin-left: 0px;
+    }
+`;
+
+export const MenuIcon = styled.div`
+    transform: translate(0%, 10%);    
+    padding-right: 10px;
+`;
+
+export const MenuText = styled.p`
+    color: primaryColor;
+`;
+
+
+
+
+export const ImageBlock = styled.div`
     display: flex;
-    justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
+    align-items: center;
+    &:hover {
+        font-size: 15rem;
+    }
+`;
+
+export const BackArrowWrapper = styled.div`
+    font-size: 2.5rem;
+    transform: translate(120%, 0%);
+    
+    &:hover {
+        font-size: 15rem;
+    }
+`;
+
+export const ForwardArrowWrapper = styled.div`
+    font-size: 2.5rem;
+    transform: translate(-160%, 10%);
+`;
+
+export const ImgWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 `;
 
 export const Img = styled.img`
-    padding-right: 0;
-    border: 0;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    max-height: 500px;
+    max-height: 300px;
 `;
+
+export const ImageTag = styled.div `
+    font-size: 1rem;
+    background: #9F7893;
+    color: white;
+    padding: 5px 5px;
+    transform: translate(20%, -70%);
+    border-radius: 5px;
+`;
+
