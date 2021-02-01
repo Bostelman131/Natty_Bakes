@@ -131,29 +131,36 @@ export const MenuText = styled.p`
 
 
 export const ImageBlock = styled.div`
-    display: flex;
+    display: flex;;
     align-items: center;
+    justify-content: center;
+
     &:hover {
-        font-size: 15rem;
+        
     }
 `;
 
 export const BackArrowWrapper = styled.div`
     font-size: 2.5rem;
-    transform: translate(120%, 0%);
+    transform: translate(50%, 0%);
     
     &:hover {
-        font-size: 15rem;
+        font-size: 2.6rem;
     }
 `;
 
 export const ForwardArrowWrapper = styled.div`
     font-size: 2.5rem;
-    transform: translate(-160%, 10%);
+    transform: translate(-50%, 0%);
+
+    &:hover {
+        font-size: 2.6rem;
+    }
 `;
 
 export const ImgWrapper = styled.div`
     display: flex;
+    position: relative;
     align-items: center;
     flex-direction: column;
 `;

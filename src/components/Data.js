@@ -19,15 +19,15 @@ export const BodyData = {
     lightTextDesc: true, 
     description: 'Delivering the best desserts in the triangle right to your door. We are sure to have something that will make your mouth water. Order from our menu today, your taste buds will thank you.',
     
-    img1: ChocolateCupcake,
-    alt1: 'A Chocolate Cupcake',
-    imageTag1: 'Chocolate Mocha Cupcake',
+    img0: ChocolateCupcake,
+    alt0: 'A Chocolate Cupcake',
+    imageTag0: 'Chocolate Mocha Cupcake',
 
-    img2: StrawberryCupcake,
-    alt2: 'A Chocolate Strawberry Cupcake',
-    imageTag2: 'Chocolate Strawberry Cupcake',
+    img1: StrawberryCupcake,
+    alt1: 'A Chocolate Strawberry Cupcake',
+    imageTag1: 'Chocolate Strawberry Cupcake',
 
-    start: false
+    start: ''
 }
 
 export const PhotoBodyData = {
