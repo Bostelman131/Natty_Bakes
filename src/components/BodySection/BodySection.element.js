@@ -78,7 +78,7 @@ export const TopLine = styled.div `
 `;
 
 export const Heading = styled.h1 `
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 30px;
     line-height: 1.1;
     text-decoration: underline;
