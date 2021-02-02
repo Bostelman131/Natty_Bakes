@@ -4,6 +4,34 @@ import { StrawberryCupcake, ChocolateCupcake,
 } from 'assets'
 
 
+const SliderData = [
+    {
+        img: ChocolateCupcake,
+        alt: 'A Chocolate Cupcake',
+        tag: 'Chocolate Mocha Cupcake',
+    },
+    {
+        img: ChocolateCupcake,
+        alt: 'A Chocolate Strawberry Cupcake',
+        tag: 'Chocolate Strawberry Cupcake',
+    },
+    {
+        img: ChocolateCupcake,
+        alt: 'A Chocolate Cupcake',
+        tag: 'Chocolate Chip Cookie',
+    },
+    {
+        img: ChocolateCupcake,
+        alt: 'A Chocolate Cupcake',
+        tag: 'Oatmeal Cookie',
+    },
+    {
+        img: ChocolateCupcake,
+        alt: 'A Chocolate Cupcake',
+        tag: 'Birthday Cake Cupcakes',
+    },
+]
+
 export const BodyData = {
     lightBg: true,
     primaryColor: '#9F7893',
@@ -18,16 +46,13 @@ export const BodyData = {
 
     lightTextDesc: true, 
     description: 'Delivering the best desserts in the triangle right to your door. We are sure to have something that will make your mouth water. Order from our menu today, your taste buds will thank you.',
-    
-    img0: ChocolateCupcake,
-    alt0: 'A Chocolate Cupcake',
-    imageTag0: 'Chocolate Mocha Cupcake',
 
-    img1: StrawberryCupcake,
-    alt1: 'A Chocolate Strawberry Cupcake',
-    imageTag1: 'Chocolate Strawberry Cupcake',
+    menuTag: 'Click Here To Explore Our Menu',
 
-    start: ''
+    start: '',
+
+    ProductData: SliderData
+
 }
 
 export const PhotoBodyData = {

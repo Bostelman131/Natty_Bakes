@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import { render } from '@testing-library/react';
+import React, { useState, useEffect } from 'react';
+import { FaFileExcel } from 'react-icons/fa';
 import { IoIosArrowDroprightCircle, IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons/lib';
+import useInterval from 'useInterval'
 import { 
     BodySec, BodyContainer, InfoRow, InfoColumn, TextWrapper,
     TopLine, Heading, Subtitle, 
     ImgWrapper, Img, ImageTag,
-    ImageBlock, BackArrowWrapper, ForwardArrowWrapper, 
+    ImageBlock, ArrowBlock, BackArrowWrapper, ForwardArrowWrapper, 
     MenuLink, MenuIcon, MenuText 
 } from './BodySection.element'
+
 
 const BodySection = ({ 
     lightBg, 
@@ -19,39 +23,33 @@ const BodySection = ({
     headline, 
     lightTextDesc, 
     description,
-    img0,
-    alt0,
-    imageTag0,
-    img1,
-    alt1,
-    imageTag1,
-    img2,
-    alt2,
-    imageTag2,
-    img3,
-    alt3,
-    imageTag3,
-    img4,
-    alt4,
-    imageTag4,
-    start
+    menuTag,
+    start,
+    ProductData
 }) => {
+    let [ changeInterval ] = useState()
+    const [ imageCount, setImage ] = useState(0);
+    const sliderPhotoCount = ProductData.length;
+    const [ hover, setHover ] = useState(false);
+    const [ click, setClick ] = useState(false);
+    const intervalDelay = 5000;
+    const arrowTimeout = 3000;
 
-    const imageStorage = {
-        0 : [img0, alt0, imageTag0],
-        1 : [img1, alt1, imageTag1],
-        2 : [img2, alt2, imageTag2],
-        3 : [img3, alt3, imageTag3],
-        4 : [img4, alt4, imageTag4],
+    const handleBackClick = () => {
+        (imageCount >= 1) ? setImage(imageCount-1) : setImage(sliderPhotoCount-1);
     }
-
-    const [imageCount, setImage] = useState(0);
-    const [hover, setHover] = useState(false);
-
-    const handleBackClick = () => (imageCount >= 1) ? setImage(imageCount-1) : setImage(4);
-    const handleForwardClick = () => (imageCount <= 3) ? setImage(imageCount+1) : setImage(0);
+    const handleForwardClick = () => {
+        (imageCount < sliderPhotoCount-1) ? setImage(imageCount+1) : setImage(0);
+    }
     const handleHover = () => setHover(true);
     const handleLeave = () => setHover(false);
+    const handleClick = () => {
+        setClick(true);
+        changeInterval(null);
+        setTimeout(()=>{setClick(false); changeInterval(intervalDelay)}, arrowTimeout);
+    };
+
+    changeInterval = useInterval(() => { handleForwardClick() }, intervalDelay);
 
     return(
         <React.Fragment>
@@ -83,7 +81,7 @@ const BodySection = ({
                                         <IoIosArrowDroprightCircle />
                                     </MenuIcon>
                                     <MenuText primaryColor={primaryColor}>
-                                        Click Here To Explore Our Menu!
+                                        {menuTag}
                                     </MenuText>
                                 </MenuLink>
                             </TextWrapper>
@@ -93,25 +91,38 @@ const BodySection = ({
                         <InfoColumn>
                             <ImageBlock 
                                 onMouseEnter={handleHover} 
-                                onMouseLeave={handleLeave}>
+                                onMouseLeave={handleLeave}
+                                onClick={handleClick}
+                                >
 
-                                { hover ? (
+                                { hover || click ? (
+                                <ArrowBlock>
                                 <BackArrowWrapper onClick={handleBackClick}>
                                     <IoIosArrowBack/>
                                 </BackArrowWrapper>
+                                </ArrowBlock>
                                 ): false}
 
-                                <ImgWrapper start={start}>
-                                    <Img src={imageStorage[imageCount][0]} alt={imageStorage[imageCount][1]} />
-                                    <ImageTag primaryColor={primaryColor}>
-                                        {imageStorage[imageCount][2]}
-                                    </ImageTag>
-                                </ImgWrapper>
+                                    {ProductData.map((product, index) => {
+                                        return(
+                                        <ImgWrapper start={start} shown={index == imageCount ? true : false} key={index}>
+                                            <Img src={product.img} alt={product.alt} />
+                                            <ImageTag primaryColor={primaryColor}>
+                                                {product.tag}
+                                            </ImageTag> 
+                                        </ImgWrapper>                               
+                                        );
+                                    })
+                                    }
+                                                
+                                
 
-                                { hover ? (
+                                { hover || click ? (
+                                <ArrowBlock>
                                 <ForwardArrowWrapper onClick={handleForwardClick}>
                                     <IoIosArrowForward/>
                                 </ForwardArrowWrapper>
+                                </ArrowBlock>
                                 ): false}
 
                             </ImageBlock>

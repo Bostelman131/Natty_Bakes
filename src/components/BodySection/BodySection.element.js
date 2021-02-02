@@ -140,22 +140,23 @@ export const ImageBlock = styled.div`
     }
 `;
 
-export const BackArrowWrapper = styled.div`
-    font-size: 2.5rem;
-    transform: translate(50%, 0%);
-    
+export const ArrowBlock = styled.div`
+    font-size: 3.5rem;
+
     &:hover {
-        font-size: 2.6rem;
+        transition: all 0.2s ease-in;
+        font-size: 4rem;
     }
 `;
 
-export const ForwardArrowWrapper = styled.div`
-    font-size: 2.5rem;
-    transform: translate(-50%, 0%);
+export const BackArrowWrapper = styled.div`
+    
+    transform: translate(50%, 0%);
+`;
 
-    &:hover {
-        font-size: 2.6rem;
-    }
+export const ForwardArrowWrapper = styled.div`
+    
+    transform: translate(-50%, 0%);
 `;
 
 export const ImgWrapper = styled.div`
@@ -163,10 +164,11 @@ export const ImgWrapper = styled.div`
     position: relative;
     align-items: center;
     flex-direction: column;
+    display: ${({shown}) => (shown ? 'flex' : 'none')};
 `;
 
 export const Img = styled.img`
-    max-height: 300px;
+    max-width: 320px;
 `;
 
 export const ImageTag = styled.div `
