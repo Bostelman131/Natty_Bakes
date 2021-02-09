@@ -25,14 +25,9 @@ export const Container = styled.div`
     padding-left: 50px;
 
     @media screen and (max-width: 991px) {
-        padding-right: 30px;
-        padding-left: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 `;
-
-
-
-
-
 
 export default GlobalStyle;

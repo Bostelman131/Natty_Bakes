@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { GlobalStyle } from './GlobalStyles'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar, Footer, Menu, Home } from './components';
+import { NotFound } from 'components';
 
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route path='/' exact component={Home}/>
             <Route path='/Menu' component={Menu}/>
+            <Route component={NotFound} />
           </Switch>
           <Footer />
         </Router>

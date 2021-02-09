@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import { Container } from 'GlobalStyles';
-import { Link } from 'react-router-dom';
 
 export const PhotoBodySec = styled.div`
-    padding: 120px 0px;
+    padding: 30px 0px;
 
     @media screen and (max-width: 960px) {
-        padding: 50px 0px;
+
     }
 `;
 
@@ -15,20 +14,29 @@ export const PhotoBodyContainer = styled(Container)`
     font-family: var(--BodyTextStyle);
     justify-content: space-between;
     flex-wrap: wrap;
-
+    padding: 0px 140px;
     ${Container};
 
     @media screen and (max-width: 960px) {
-        display: ${({AdditionalPhotos}) => (AdditionalPhotos ? 'none' : 'flex')};
+        
+        padding: 0px 10px;
     }
 `;
 
 export const PhotoBodyImage = styled.img`
-    max-width: 24%;
+    max-width: 15%;
     margin-bottom:20px;
+    max-height: 300px;
+    border-radius: 6px;
+
+    @media screen and (max-width: 1100px) {
+        display: ${({key}) => ( key > 7 ? 'none' : 'flex')};
+        max-width: 24%;
+    }
 
     @media screen and (max-width: 960px) {
-        max-width: 49%;
+        display: ${({imageCount}) => ( (imageCount > 5) ? 'none' : 'flex')};
+        max-width: 32%;
     }
 
     &:hover {

@@ -1,6 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-
 
 export const SignButton = styled.button `
     margin-top: .75rem;

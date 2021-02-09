@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/static/js/main.b4bf487d.chunk.js",
+    "main.js.map": "/static/js/main.b4bf487d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4c79a866.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4c79a866.js.map",
+    "static/js/2.f504f3d4.chunk.js": "/static/js/2.f504f3d4.chunk.js",
+    "static/js/2.f504f3d4.chunk.js.map": "/static/js/2.f504f3d4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.f504f3d4.chunk.js.LICENSE.txt": "/static/js/2.f504f3d4.chunk.js.LICENSE.txt",
+    "static/media/ChocCookiesStock.8528f240.jpg": "/static/media/ChocCookiesStock.8528f240.jpg",
+    "static/media/ChocCupcake.42672083.png": "/static/media/ChocCupcake.42672083.png",
+    "static/media/ChocCupcakeStock.31aaaf85.jpg": "/static/media/ChocCupcakeStock.31aaaf85.jpg",
+    "static/media/Logo.b1783b09.svg": "/static/media/Logo.b1783b09.svg",
+    "static/media/MMCakes.0c985ae6.jpg": "/static/media/MMCakes.0c985ae6.jpg",
+    "static/media/MixingStock.44464077.jpg": "/static/media/MixingStock.44464077.jpg",
+    "static/media/RawCookies.d4b91861.jpg": "/static/media/RawCookies.d4b91861.jpg",
+    "static/media/StirStock.2f2440fb.jpg": "/static/media/StirStock.2f2440fb.jpg",
+    "static/media/StrawberryCupcake.8a53b314.png": "/static/media/StrawberryCupcake.8a53b314.png",
+    "static/media/WeddingCakeStock.a7196db9.jpg": "/static/media/WeddingCakeStock.a7196db9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c79a866.js",
+    "static/js/2.f504f3d4.chunk.js",
+    "static/js/main.b4bf487d.chunk.js"
+  ]
+}

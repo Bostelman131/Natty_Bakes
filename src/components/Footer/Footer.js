@@ -1,5 +1,4 @@
 import React from 'react';
-import { instagram } from 'react-icons/fa';
 import { FooterContainer} from './Footer.elements';
 import { IconContext } from 'react-icons/lib';
 

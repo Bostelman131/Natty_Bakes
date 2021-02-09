@@ -1,6 +1,4 @@
-import { render } from '@testing-library/react';
-import React, { useState, useEffect } from 'react';
-import { FaFileExcel } from 'react-icons/fa';
+import React, { useState } from 'react';
 import { IoIosArrowDroprightCircle, IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons/lib';
 import useInterval from 'useInterval'
@@ -105,7 +103,7 @@ const BodySection = ({
 
                                     {ProductData.map((product, index) => {
                                         return(
-                                        <ImgWrapper start={start} shown={index == imageCount ? true : false} key={index}>
+                                        <ImgWrapper start={start} shown={index === imageCount ? true : false} key={index}>
                                             <Img src={product.img} alt={product.alt} />
                                             <ImageTag primaryColor={primaryColor}>
                                                 {product.tag}
