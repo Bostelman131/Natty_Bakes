@@ -105,6 +105,10 @@ export const Subtitle = styled.p `
     line-height: 2;
     text-indent: 30px;
     color: ${({ lightTextDesc, primaryColor})  => (lightTextDesc ? primaryColor : 'white')};
+
+    @media screen and (max-width: 960px) {
+        margin-bottom: 20px;
+    }
 `;
 
 export const MenuLink = styled(Link)`
@@ -113,7 +117,7 @@ export const MenuLink = styled(Link)`
     align-items: center;
     cursor: pointer;
     margin-left: 40px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 20px;
     color: var(--primaryColor);
 
